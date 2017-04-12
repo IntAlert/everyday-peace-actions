@@ -1,0 +1,17 @@
+{
+  "name": "botly-web",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Alan Thomson <alan@projectmccoll.co.uk>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

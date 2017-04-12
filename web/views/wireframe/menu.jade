@@ -1,0 +1,90 @@
+extends ../layout
+
+block content
+	div.menu(
+		ng-controller="MenuController" 
+	)
+
+
+		//- Current
+		div.current-challenge
+			md-toolbar(
+				layout="row"
+				class="md-hue-3"
+			)
+				div.md-toolbar-tools
+					span Your current challenge
+			md-content(
+				layout="row"
+			)
+				div(flex="30")
+					md-icon(md-svg-icon="avatar:svg-1")
+				div(flex="70")
+					h1 Challenge Title
+					p.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					md-button.md-raised.md-primary Complete
+
+
+		//- Badge lists
+		div(
+			layout-gt-sm="row"
+			layout="column"
+		)
+			//- To Earn
+			div(flex-gt-sm="50" flex)
+				md-toolbar(
+					layout="row"
+					class="md-hue-3"
+				)
+					div.md-toolbar-tools
+						span Badges to Earn
+				md-content
+					md-list(flex)
+						md-subheader.md-no-sticky Click a badge to find out more
+
+						md-list-item.md-3-line(
+							ng-repeat="badge in badges"
+							ng-click="null"
+						)
+							md-icon(md-svg-icon="avatar:svg-{{$index+1}}")
+							div.md-list-item-text(
+								layout="column"
+							)
+								h3 {{ badge.who }}
+								h4 {{ badge.what }}
+								p {{ badge.notes }}
+						md-divider
+
+			//- Earned
+			div(flex-gt-sm="50" flex)
+				md-toolbar(
+					layout="row"
+					class="md-hue-3"
+				)
+					div.md-toolbar-tools
+						span Badges Earned
+				md-content
+					md-list(flex)
+						md-subheader.md-no-sticky Click a badge to find out more
+
+						md-list-item.md-3-line(
+							ng-repeat="badge in badges"
+							ng-click="null"
+						)
+							md-icon(md-svg-icon="avatar:svg-{{$index+1}}")
+							div.md-list-item-text(
+								layout="column"
+							)
+								h3 {{ badge.who }}
+								h4 {{ badge.what }}
+								p {{ badge.notes }}
+
+
+
+
